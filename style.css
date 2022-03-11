@@ -1,0 +1,283 @@
+:root {
+  --black: "#000000";
+  --dark-grey: "#777777";
+  --blue: "#2168F4";
+  --white: "#FFFFFF";
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0.1px 56px 21px 56px;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  padding-bottom: 21px;
+  padding-top: 21px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  margin-right: 28px;
+}
+
+.logo-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items li a {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin: 0 20px;
+  opacity: 0.48;
+}
+
+.nav-items li a.active {
+  opacity: 1;
+}
+
+.login-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-log-in {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 11px;
+}
+
+.txt-log-in {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.btn-sign-up {
+  background-color: #2168f4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 11px;
+}
+
+.txt-sign-up {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.logo-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.element {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  width: 132px;
+  height: 115px;
+}
+
+.hero-container {
+  display: flex;
+  margin-top: 122px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-container .left {
+  /* margin-right: 110px;*/
+  animation: fadeInToRight 1200ms cubic-bezier(0.22, 0.32, 0, 1.54) 0ms;
+}
+
+.hero-container .left h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000000;
+  margin-bottom: 25px;
+  width: 430px;
+}
+
+.hero-container .left h2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+  line-height: 28px;
+  margin-bottom: 25px;
+  width: 650px;
+}
+
+.hero-container .left p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 45px;
+  width: 420px;
+  color: #000000;
+}
+
+.hero-container .right {
+  /*margin-top: -61px;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-get-started {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #2168f4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+
+.hero-container .right .illustration {
+  width: 800px;
+}
+
+.conocenos-img {
+  width: 500px;
+  margin-left: 100px;
+}
+
+.left-contactanos {
+  width: 400px;
+  animation: fadeInToRightSml 800ms cubic-bezier(0.22, 0.32, 0, 1.54) 0ms;
+}
+
+.hero-container .right-contactanos {
+  width: 950px;
+}
+
+.hero-container .right-contactanos .contactanos-img {
+  width: 750px;
+  margin-left: 100px;
+}
+
+.left-conocenos {
+  width: 100%;
+  text-align: justify;
+  animation: fadeInToRightSml 800ms cubic-bezier(0.22, 0.32, 0, 1.54) 0ms;
+}
+
+.hero-container .left-conocenos h1,
+.left-contactanos h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.hero-container .left-conocenos h2,
+.left-contactanos h2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.hero-container .left-conocenos h3,
+.hero-container .left-contactanos h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #000000;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+  margin-bottom: 25px;
+  width: 650px;
+}
+
+.hero-container .left-conocenos p,
+.left-contactanos p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 45px;
+  color: #000000;
+}
+
+.hero-container .left-conocenos ul,
+.left-contactanos ul {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 45px;
+  color: #000000;
+  margin-left: 20px;
+}
+
+/* animaciones */
+@keyframes fadeInToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInToRightSml {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
