@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>Contáctanos</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script>
+        tailwind.config = {
+            content: [],
+            theme: {
+                extend: {
+                    fontFamily: {
+                        family: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+            plugins: [],
+        }
+    </script>
+
+
+</head>
+
+<body class="font-family">
+
+    <div id="app">
+        <!-- nav bar-->
+        <section>
+            <header class="bg-indigo-600">
+                <nav class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8" aria-label="Top">
+                    <div
+                        class="flex items-center justify-between w-full py-6 border-b border-indigo-500 lg:border-none">
+                        <div class="flex items-center">
+                            <a href="/">
+                                <span class="sr-only">MacSafe</span>
+                                <img class="w-12 h-12" src="assets/img/logo.png" alt="MacSafe">
+                            </a>
+                            <div class="hidden ml-10 space-x-8 lg:block">
+                                <a href="/"
+                                    class="text-base font-medium text-white transition duration-150 border-b-4 border-transparent hover:text-indigo-50 hover:border-white">
+                                    Inicio</a>
+
+                                <a href=" about.html"
+                                    class="text-base font-medium text-white transition duration-150 border-b-4 border-transparent hover:text-indigo-50 hover:border-white">
+                                    Acerca de</a>
+
+                                <a href="pricing.html"
+                                    class="text-base font-medium text-white transition duration-150 border-b-4 border-transparent hover:text-indigo-50 hover:border-white">
+                                    Planes</a>
+
+                                <a href=" about.html" class="text-base font-medium text-white hover:text-indigo-50">
+                                    Contáctanos</a>
+                            </div>
+                        </div>
+                        <div class="ml-10 space-x-4">
+                            <a href="#"
+                                class="inline-block px-4 py-2 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-md hover:bg-opacity-75">
+                                Entrar </a>
+                            <a href="#"
+                                class="inline-block px-4 py-2 text-base font-medium text-indigo-600 bg-white border border-transparent rounded-md hover:bg-indigo-50">
+                                Registrarse
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-center py-4 space-x-6 lg:hidden">
+                        <a href="/" class="text-base font-medium text-white hover:text-indigo-50">
+                            Inicio
+                        </a>
+
+                        <a href="about.html" class="text-base font-medium text-white hover:text-indigo-50">
+                            Acerca de
+                        </a>
+
+                        <a href="pricing.html" class="text-base font-medium text-white hover:text-indigo-50">
+                            Planes </a>
+
+                        <a href="contact.html" class="text-base font-medium text-white hover:text-indigo-50">
+                            Contáctanos
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+        </section>
+
+        <!-- Hero-->
+        <section>
+            <div class="bg-white">
+                <div class="px-4 py-16 mx-auto max-w-7xl sm:py-24 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Contáctanos</h2>
+                        <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+                            ¿Necesitas ayuda?</p>
+                        <p class="max-w-xl mx-auto mt-5 text-xl text-gray-500">Haznos saber si tienes un problema o
+                            necesitas
+                            ayuda por cualquier asunto.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <div class="bg-white">
+                <div class="px-4 py-12 mx-auto max-w-7xl sm:py-12 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Soporte técnico</h2>
+                    <p class="max-w-3xl mt-6 text-lg text-gray-500">En caso de que presentes complicaciones con el
+                        servicio, contáctanos y nosotros te ayudaremos.</p>
+                    <div class="flex mt-6">
+                        <div class="flex-shrink-0">
+                            <!-- Heroicon name: outline/mail -->
+                            <a href="mailto:macsafe.contacto@gmail.com" class="text-gray-400 hover:text-gray-500">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="ml-3 text-base text-gray-500">
+                            <p>macsafe.contacto@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer-->
+        <section>
+            <footer class="bg-white">
+                <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+                    <div class="flex justify-center space-x-6 md:order-2">
+                        <a href="mailto:macsafe.contacto@gmail.com" class="text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">E-mail</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M23.954,5.542,15.536,13.96a5.007,5.007,0,0,1-7.072,0L.046,5.542C.032,5.7,0,5.843,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6C24,5.843,23.968,5.7,23.954,5.542Z" />
+                                <path
+                                    d="M14.122,12.546l9.134-9.135A4.986,4.986,0,0,0,19,1H5A4.986,4.986,0,0,0,.744,3.411l9.134,9.135A3.007,3.007,0,0,0,14.122,12.546Z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                    <div class="mt-8 md:mt-0 md:order-1">
+                        <p class="text-base text-center text-gray-400">&copy; 2022 MacSafe. Todos los derechos
+                            reservados.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

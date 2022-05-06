@@ -1,76 +1,668 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MacSafe</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/x-icon" href="images/logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@ 500;600; 700&display%=swap" rel="stylesheet" />
+    <title>MacSafe</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon-gray.ico" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script>
+        tailwind.config = {
+            content: [],
+            theme: {
+                extend: {
+                    fontFamily: {
+                        family: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+            plugins: [],
+        }
+    </script>
+
 </head>
 
-<body>
-  <div class="wrapper">
-    <div class="header">
-      <div class="logo-menu">
-        <div class="logo">
-          <a href="#">
-            <img class="logo-img" src="images/logo.svg" alt="Logo" />
-          </a>
-        </div>
+<body class="font-family">
 
-        <nav class="nav">
-          <ul class="nav-items">
-            <li>
-              <a href="index.html" class="active">Inicio</a>
-            </li>
-            <li>
-              <a href="acerca-de.html">Acerca de</a>
-            </li>
-            <li>
-              <a href="contactanos.html">Contáctanos</a>
-            </li>
-            <li>
-              <a href="conocenos.html">Conocenos</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <div id="app">
+        <!-- nav bar-->
+        <section>
+            <header class="bg-gray-800">
+                <nav class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8" aria-label="Top">
+                    <div
+                        class="flex items-center justify-between w-full py-6 border-b border-indigo-500 lg:border-none">
+                        <div class="flex items-center">
+                            <a href="/">
+                                <span class="sr-only">MacSafe</span>
+                                <img class="w-12 h-12" src="assets/img/logo-gray.png" alt="MacSafe">
+                            </a>
+                            <div class="hidden ml-10 space-x-8 lg:block">
+                                <a href="/" class="text-base font-medium text-white hover:text-indigo-50">
+                                    Inicio</a>
 
-      <!--Login Buttons-->
-      <!--<div class="login-buttons">
-        <div class="btn-log-in">
-          <a href="#" class="txt-log-in">Iniciar sesión</a>
-        </div>
-        <div class="btn-sign-up">
-          <a href="#" class="txt-sign-up">Registrate</a>
-        </div>
-      </div>-->
+                                <a href="about.html"
+                                    class="text-base font-medium text-white transition duration-150 border-b-4 border-transparent hover:text-indigo-50 hover:border-indigo-500">
+                                    Acerca de</a>
 
+                                <a href="pricing.html"
+                                    class="text-base font-medium text-white transition duration-150 border-b-4 border-transparent hover:text-indigo-50 hover:border-indigo-500">
+                                    Planes</a>
+
+                                <a href="contact.html"
+                                    class="text-base font-medium text-white transition duration-150 border-b-4 border-transparent hover:text-indigo-50 hover:border-indigo-500">
+                                    Contáctanos</a>
+                            </div>
+                        </div>
+                        <div class="ml-10 space-x-4">
+                            <a href="#"
+                                class="inline-block px-4 py-2 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md hover:bg-opacity-75">
+                                Entrar </a>
+                            <a href="#"
+                                class="inline-block px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-opacity-75">
+                                Registrarse
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-center py-4 space-x-6 lg:hidden">
+                        <a href="/" class="text-base font-medium text-white hover:text-indigo-50">
+                            Inicio
+                        </a>
+
+                        <a href="about.html" class="text-base font-medium text-white hover:text-indigo-50">
+                            Acerca de
+                        </a>
+
+                        <a href="pricing.html" class="text-base font-medium text-white hover:text-indigo-50">
+                            Planes </a>
+
+                        <a href="contact.html" class="text-base font-medium text-white hover:text-indigo-50">
+                            Contáctanos
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+        </section>
+
+        <!-- Hero-->
+        <section>
+            <div class="relative overflow-hidden bg-gray-800">
+                <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
+                    <svg class="absolute bottom-0 right-0 mb-48 text-gray-700 transform translate-x-1/2 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
+                        width="364" height="384" viewBox="0 0 364 384" fill="none">
+                        <defs>
+                            <pattern id="eab71dd9-9d7a-47bd-8044-256344ee00d0" x="0" y="0" width="20" height="20"
+                                patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" fill="currentColor" />
+                            </pattern>
+                        </defs>
+                        <rect width="364" height="384" fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)" />
+                    </svg>
+                </div>
+                <div class="relative pt-6 pb-16 sm:pb-24">
+
+                    <main class="mt-16 sm:mt-24">
+                        <div class="mx-auto max-w-7xl">
+                            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                                <div
+                                    class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+                                    <div>
+
+                                        <h1
+                                            class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+                                            <span class="md:block">Conoce la</span>
+                                            <span class="text-indigo-400 md:block">verdad.</span>
+                                        </h1>
+                                        <p
+                                            class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                            Crea una cuenta gratis y disfruta de nuestros servicios para
+                                            poder compartir eso que quieres, ¡sin preocupaciones!</p>
+
+                                    </div>
+                                </div>
+                                <div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+                                    <div
+                                        class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                                        <div class="px-4 py-8 sm:px-10">
+                                            <!--
+                                            <div>
+                                                <p class="text-sm font-medium text-gray-700">Iniciar sesión con</p>
+
+                                                <div class="grid grid-cols-3 gap-3 mt-1">
+                                                    <div>
+                                                        <a href="#"
+                                                            class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
+                                                            <span class="sr-only">Inicia sesion con Facebook</span>
+                                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                                                aria-hidden="true">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
+                                                                    clip-rule="evenodd" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+
+                                                    <div>
+                                                        <a href="#"
+                                                            class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
+                                                            <span class="sr-only">Inicia sesion con Twitter</span>
+                                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                                                aria-hidden="true">
+                                                                <path
+                                                                    d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+
+                                                    <div>
+                                                        <a href="#"
+                                                            class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
+                                                            <span class="sr-only">Inicia sesion con GitHub</span>
+                                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                                                aria-hidden="true">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                                                                    clip-rule="evenodd" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="relative mt-6">
+                                                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                                                    <div class="w-full border-t border-gray-300"></div>
+                                                </div>
+                                                <div class="relative flex justify-center text-sm">
+                                                    <span class="px-2 text-gray-500 bg-white"> o </span>
+                                                </div>
+                                            </div>
+
+                                            -->
+
+                                            <div class="mt-6">
+                                                <form action="#" method="POST" class="space-y-6">
+                                                    <div>
+                                                        <label for="name" class="sr-only">Nombre</label>
+                                                        <input type="text" name="name" id="name" autocomplete="name"
+                                                            placeholder="Nombre completo" required
+                                                            class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="mobile-or-email" class="sr-only">Télefono o
+                                                            email</label>
+                                                        <input type="text" name="mobile-or-email" id="mobile-or-email"
+                                                            autocomplete="email" placeholder="Télefono celular o e-mail"
+                                                            required
+                                                            class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="password" class="sr-only">Contraseña</label>
+                                                        <input id="password" name="password" type="password"
+                                                            placeholder="Contraseña" autocomplete="current-password"
+                                                            required
+                                                            class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                    </div>
+
+                                                    <div>
+                                                        <button type="submit"
+                                                            class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Crea
+                                                            tu cuenta
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="px-4 py-6 border-t-2 border-gray-200 bg-gray-50 sm:px-10">
+                                            <p class="text-xs leading-5 text-gray-500">Al registrarte, aceptas nuestros
+                                                <a href="#"
+                                                    class="font-medium text-gray-900 hover:underline">Términos</a>,
+                                                <a href="#" class="font-medium text-gray-900 hover:underline">Política
+                                                    de datos</a> y <a href="#"
+                                                    class="font-medium text-gray-900 hover:underline">Política de
+                                                    Cookies</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature-->
+        <section>
+            <div class="py-12 bg-white">
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div class="lg:text-center">
+                        <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Ventajas</h2>
+                        <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">¿Por
+                            qué utilizar MacShare?</p>
+                    </div>
+
+                    <div class="mt-10">
+                        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                            <div class="relative">
+                                <dt>
+                                    <div
+                                        class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                                        <!-- Heroicon name: outline/globe-alt -->
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 15L13 20L8.99995 9L20 13L15 15ZM15 15L20 20M7.18818 2.23853L7.96464 5.1363M5.13618 7.96472L2.2384 7.18826M13.9497 4.05029L11.8283 6.17161M6.17158 11.8284L4.05026 13.9497"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <p class="ml-16 text-lg font-medium leading-6 text-gray-900">Fácil</p>
+                                </dt>
+                                <dd class="mt-2 ml-16 text-base text-gray-500">Con nuestro menú optimizado, podrás hacer
+                                    uso de todos los servicios de manera intituiva
+                                    para evitar complicaciones.</dd>
+                            </div>
+
+                            <div class="relative">
+                                <dt>
+                                    <div
+                                        class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                                        <!-- Heroicon name: outline/scale -->
+                                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-16 text-lg font-medium leading-6 text-gray-900">Rápido</p>
+                                </dt>
+                                <dd class="mt-2 ml-16 text-base text-gray-500">No tendrás que esperar, podrás tener tu
+                                    foto lista en poco tiempo.</dd>
+                            </div>
+
+                            <div class="relative">
+                                <dt>
+                                    <div
+                                        class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                                        <!-- Heroicon name: outline/lightning-bolt -->
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-16 text-lg font-medium leading-6 text-gray-900">Seguro
+                                    </p>
+                                </dt>
+                                <dd class="mt-2 ml-16 text-base text-gray-500">No tienes que preocuparte por dónde se
+                                    guardan tus fotos, estás estarán encriptadas y solo tú tendrás acceso a ellas.</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info -->
+        <section>
+            <div class="px-4 py-16 overflow-hidden bg-white xl:py-36 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-max lg:max-w-7xl">
+                    <div class="relative z-10 mb-8 md:mb-2 md:px-6">
+                        <div class="text-base max-w-prose lg:max-w-none">
+                            <h2 class="font-semibold leading-6 tracking-wide text-indigo-600 uppercase">Problemática y
+                                solución
+                            </h2>
+                            <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                                ¿Por qué creamos MacShare?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <svg class="absolute top-0 right-0 hidden -mt-20 -mr-20 md:block" width="404" height="384"
+                            fill="none" viewBox="0 0 404 384" aria-hidden="true">
+                            <defs>
+                                <pattern id="95e8f2de-6d30-4b7e-8159-f791729db21b" x="0" y="0" width="20" height="20"
+                                    patternUnits="userSpaceOnUse">
+                                    <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                                </pattern>
+                            </defs>
+                            <rect width="404" height="384" fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)" />
+                        </svg>
+                        <svg class="absolute bottom-0 left-0 hidden -mb-20 -ml-20 md:block" width="404" height="384"
+                            fill="none" viewBox="0 0 404 384" aria-hidden="true">
+                            <defs>
+                                <pattern id="7a00fe67-0343-4a3c-8e81-c145097a3ce0" x="0" y="0" width="20" height="20"
+                                    patternUnits="userSpaceOnUse">
+                                    <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                                </pattern>
+                            </defs>
+                            <rect width="404" height="384" fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
+                        </svg>
+                        <div class="relative md:bg-white md:p-6">
+                            <div class="lg:grid lg:grid-cols-2 lg:gap-6">
+                                <div class="prose prose-lg text-gray-500 prose-indigo lg:max-w-none">
+                                    <p><b>Nuestro motivo principal</b></p>
+                                    <p>Los usuarios necesitan una herramienta que les brinde seguridad cuando compartan
+                                        fotografías
+                                        privadas, por eso realizamos una encuesta y considerando los resultados
+                                        obtenidos, llegamos a la conclusión de que las personas que compartieron sus
+                                        fotografías y fueron filtradas, ¡no saben quién lo hizo!, por lo que la
+                                        idea prinicipal del proyecto es ayudarte con este gran problema.
+
+                                </div>
+                                <div class="mt-6 prose prose-lg text-gray-500 prose-indigo lg:mt-0">
+                                    <p><b>¿Qué solución te ofrecemos?</b></p>
+                                    <p> Nuestra página logra hacer esto de una forma segura y confiable, además de que
+                                        las fotografías que sean depositadas
+                                        en nuestro sistema no se guardarán, por lo que tampoco tendrás que preocpuarte
+                                        porque nosotros las veamos. Además, implementamos un sistema de marcas de agua
+                                        invisbles,
+                                        en el cual se van a incluir datos del remitente y solamente tu podrás
+                                        consultarlos.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="inline-flex mt-8 rounded-md shadow">
+                                <a href="#"
+                                    class="flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700">
+                                    Pruebalo ya </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Princing -->
+        <section>
+            <div class="relative bg-white">
+                <div class="absolute inset-0" aria-hidden="true">
+                    <div class="absolute inset-y-0 right-0 w-1/2 bg-indigo-700"></div>
+                </div>
+                <div class="relative mx-auto max-w-7xl lg:px-8 lg:grid lg:grid-cols-2">
+                    <div class="px-4 py-16 bg-white sm:py-24 sm:px-6 lg:px-0 lg:pr-8">
+                        <div class="max-w-lg mx-auto lg:mx-0">
+                            <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">¿Cómo funciona?
+                            </h2>
+                            <p class="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl">Sólo sigue estos sencillos
+                                pasos:</p>
+                            <dl class="mt-12 space-y-10">
+                                <div class="relative">
+                                    <dt>
+                                        <div
+                                            class="absolute flex items-center justify-center w-12 h-12 bg-indigo-500 rounded-md">
+                                            <!-- Heroicon name: outline/view-list -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8 17C5.23858 17 3 14.7614 3 12C3 9.55154 4.75992 7.51413 7.08376 7.08376C7.51412 4.75992 9.55154 3 12 3C14.4485 3 16.4859 4.75992 16.9162 7.08376C19.2401 7.51413 21 9.55154 21 12C21 14.7614 18.7614 17 16 17M9 12L12 9M12 9L15 12M12 9V21"
+                                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                        <p class="ml-16 text-lg font-medium leading-6 text-gray-900">Sube tu foto</p>
+                                    </dt>
+                                    <dd class="mt-2 ml-16 text-base text-gray-500">Crea un nuevo albúm y agrega el nuevo
+                                        contenido.</dd>
+                                </div>
+
+                                <div class="relative">
+                                    <dt>
+                                        <div
+                                            class="absolute flex items-center justify-center w-12 h-12 bg-indigo-500 rounded-md">
+                                            <!-- Heroicon name: outline/view-boards -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M19.428 15.4282C19.1488 15.149 18.7932 14.9587 18.406 14.8812L16.0185 14.4037C14.7101 14.1421 13.3519 14.324 12.1585 14.9207L11.8411 15.0793C10.6477 15.676 9.28948 15.8579 7.98113 15.5963L6.04938 15.2099C5.39366 15.0788 4.71578 15.284 4.24294 15.7569M7.9998 4H15.9998L14.9998 5V10.1716C14.9998 10.702 15.2105 11.2107 15.5856 11.5858L20.5856 16.5858C21.8455 17.8457 20.9532 20 19.1714 20H4.82823C3.04642 20 2.15409 17.8457 3.41401 16.5858L8.41402 11.5858C8.78909 11.2107 8.9998 10.702 8.9998 10.1716V5L7.9998 4Z"
+                                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                        <p class="ml-16 text-lg font-medium leading-6 text-gray-900">Configura la marca
+                                            de agua</p>
+                                    </dt>
+                                    <dd class="mt-2 ml-16 text-base text-gray-500">Escribe el texto que quieras que se
+                                        marque en la fotografía.</dd>
+                                </div>
+
+                                <div class="relative">
+                                    <dt>
+                                        <div
+                                            class="absolute flex items-center justify-center w-12 h-12 bg-indigo-500 rounded-md">
+                                            <!-- Heroicon name: outline/calendar -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8 16C5.23858 16 3 13.7614 3 11C3 8.55154 4.75992 6.51413 7.08376 6.08376C7.51412 3.75992 9.55154 2 12 2C14.4485 2 16.4859 3.75992 16.9162 6.08376C19.2401 6.51413 21 8.55154 21 11C21 13.7614 18.7614 16 16 16M9 19L12 22M12 22L15 19M12 22V10"
+                                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-16 text-lg font-medium leading-6 text-gray-900">Descarga tu foto
+                                        </p>
+                                    </dt>
+                                    <dd class="mt-2 ml-16 text-base text-gray-500">Cuando tu foto esté lista podrás
+                                        guardarla en tu dispositivo.</dd>
+                                </div>
+
+                                <div class="relative">
+                                    <dt>
+                                        <div
+                                            class="absolute flex items-center justify-center w-12 h-12 bg-indigo-500 rounded-md">
+                                            <!-- Heroicon name: outline/users -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 13L9 17L19 7" stroke="#ffffff" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-16 text-lg font-medium leading-6 text-gray-900">¡Y listo!</p>
+                                    </dt>
+                                    <dd class="mt-2 ml-16 text-base text-gray-500">Ahora estás listo para compartir tu
+                                        foto sin ninguna preocupación.
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div
+                        class="px-4 py-16 bg-indigo-700 sm:py-24 sm:px-6 lg:bg-none lg:px-0 lg:pl-8 lg:flex lg:items-center lg:justify-end">
+                        <div class="w-full max-w-lg mx-auto space-y-8 lg:mx-0">
+                            <div>
+                                <h2 class="sr-only">Price</h2>
+                                <p class="relative">
+                                    <span class="flex flex-col text-center">
+                                        <span class="text-5xl font-extrabold tracking-tight text-white text-center">$79
+                                            MXN</span>
+                                        <span class="mt-2 text-base font-medium text-indigo-200">¡Aprovéchalo!</span>
+
+                                    </span>
+
+
+                                    </span>
+                                </p>
+                            </div>
+                            <ul role="list" class="grid gap-px overflow-hidden rounded sm:grid-cols-2">
+                                <li
+                                    class="flex items-center px-4 py-4 space-x-3 text-base text-white bg-indigo-800 bg-opacity-50">
+                                    <!-- Heroicon name: outline/check -->
+                                    <svg class="w-6 h-6 text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Marcar fotos ilimitadamente</span>
+                                </li>
+
+                                <li
+                                    class="flex items-center px-4 py-4 space-x-3 text-base text-white bg-indigo-800 bg-opacity-50">
+                                    <!-- Heroicon name: outline/check -->
+                                    <svg class="w-6 h-6 text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Consultar fotos en cualquier momento</span>
+                                </li>
+
+                                <li
+                                    class="flex items-center px-4 py-4 space-x-3 text-base text-white bg-indigo-800 bg-opacity-50">
+                                    <!-- Heroicon name: outline/check -->
+                                    <svg class="w-6 h-6 text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Acceso a las carpetas</span>
+                                </li>
+
+                                <li
+                                    class="flex items-center px-4 py-4 space-x-3 text-base text-white bg-indigo-800 bg-opacity-50">
+                                    <!-- Heroicon name: outline/check -->
+                                    <svg class="w-6 h-6 text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Almacena tus fotografías por 30 días</span>
+                                </li>
+
+                                <li
+                                    class="flex items-center px-4 py-4 space-x-3 text-base text-white bg-indigo-800 bg-opacity-50">
+                                    <!-- Heroicon name: outline/check -->
+                                    <svg class="w-6 h-6 text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Registro de filtraciones </span>
+                                </li>
+
+                                <li
+                                    class="flex items-center px-4 py-4 space-x-3 text-base text-white bg-indigo-800 bg-opacity-50">
+                                    <!-- Heroicon name: outline/check -->
+                                    <svg class="w-6 h-6 text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Sistema organizado</span>
+                                </li>
+                            </ul>
+                            <a href="#"
+                                class="flex items-center justify-center w-full px-8 py-4 text-lg font-medium leading-6 text-indigo-600 bg-white border border-transparent rounded-md hover:bg-indigo-50 md:px-10">
+                                Comienza ahora </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- footer-->
+        <section>
+            <footer class="bg-white" aria-labelledby="footer-heading">
+                <h2 id="footer-heading" class="sr-only">Footer</h2>
+                <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+                    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                        <div class="space-y-8 xl:col-span-1">
+                            <img class="h-10" src="assets/img/logo-gray.png" alt="MacSafe">
+                            <p class="text-base text-gray-500">Una empresa de software mexicana enfocada en buscar tu
+                                comodidad y seguridad.</p>
+                            <div class="flex space-x-6">
+                                <a href="mailto:macsafe.contacto@gmail.com" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">E-mail</span>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M23.954,5.542,15.536,13.96a5.007,5.007,0,0,1-7.072,0L.046,5.542C.032,5.7,0,5.843,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6C24,5.843,23.968,5.7,23.954,5.542Z" />
+                                        <path
+                                            d="M14.122,12.546l9.134-9.135A4.986,4.986,0,0,0,19,1H5A4.986,4.986,0,0,0,.744,3.411l9.134,9.135A3.007,3.007,0,0,0,14.122,12.546Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+                            <div class="md:grid md:grid-cols-2 md:gap-8">
+                                <div>
+                                    <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">Enlaces
+                                    </h3>
+                                    <ul role="list" class="mt-4 space-y-4">
+                                        <li>
+                                            <a href="/" class="text-base text-gray-500 hover:text-gray-900"> Inicio </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="about.html" class="text-base text-gray-500 hover:text-gray-900">
+                                                Acerca de
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="pricing.html" class="text-base text-gray-500 hover:text-gray-900">
+                                                Planes </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="contact.html" class="text-base text-gray-500 hover:text-gray-900">
+                                                Contáctanos
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="mt-12 md:mt-0">
+                                    <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">Comunidad
+                                    </h3>
+                                    <ul role="list" class="mt-4 space-y-4">
+                                        <li>
+                                            <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Privacidad
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Términos de
+                                                uso
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Soporte
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-8 mt-12 border-t border-gray-200">
+                        <p class="text-base text-gray-400 xl:text-center">&copy; 2022 MacSafe. Todos los derechos
+                            reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </section>
 
     </div>
 
-    <div class="hero-container">
-      <div class="left">
-        <h1>Conoce la verdad.</h1>
-        <p>
-          Crea una cuenta gratis y disfruta de nuestros servicios para poder
-          compartir eso que quieres, <b>¡sin preocupaciones!</b></p>
-        </p>
-        
-        <!--get started button-->
-        <!--<a href="#" class="btn-get-started">Empieza ya</a>-->
-      </div>
-
-      <div class="right">
-        <img class="illustration" src="images/Illustrations.svg" alt="illustrations" />
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>
